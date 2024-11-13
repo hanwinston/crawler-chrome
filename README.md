@@ -1,9 +1,5 @@
-
-
 ## To create docker image
 docker build -t crawler-chrome .
-
-
 
 ## To run docker and connect to remote selenium at the same host
 docker run  --network="host" -it crawler-chrome
@@ -16,7 +12,6 @@ cd terraform
 terraform init
 terraform plan
 terraform apply
-
 
 ## push to ECR (after treeaform apply)
 aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 602843233966.dkr.ecr.us-west-2.amazonaws.com
